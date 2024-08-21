@@ -60,6 +60,9 @@ if (DEBUG_ON_PICO)
     )
 endif ()
 
+add_subdirectory(
+        boards
+)
 
 target_link_libraries(debugprobe PRIVATE
         pico_multicore
@@ -67,6 +70,7 @@ target_link_libraries(debugprobe PRIVATE
         pico_unique_id
         tinyusb_device
         tinyusb_board
+        board_ui
         hardware_pio
         FreeRTOS-Kernel
         FreeRTOS-Kernel-Heap1

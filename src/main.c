@@ -36,6 +36,7 @@
 #else
 #include "bsp/board.h"
 #endif
+#include "board_ui.h"
 #include "tusb.h"
 
 #include "probe_config.h"
@@ -96,6 +97,7 @@ int main(void) {
     DAP_Setup();
 
     led_init();
+    board_ui_init();
 
     probe_info("Welcome to debugprobe!\n");
 
